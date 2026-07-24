@@ -1,0 +1,38 @@
+.App {
+    text-align: left;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px 15px;
+    text-align: left;
+}
+
+h1,
+h2 {
+    margin-bottom: 10px;
+}
+
+ul,
+ol {
+    margin-left: 20px;
+}
+
+hr {
+    margin: 20px 0;
+}
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
