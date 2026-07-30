@@ -1,0 +1,137 @@
+<div class="form-container">
+
+  <h2>Reactive Enrollment Form</h2>
+
+  <div class="success" *ngIf="submitted">
+    Enrollment request submitted successfully!
+  </div>
+
+  <form [formGroup]="enrollForm" (ngSubmit)="onSubmit()">
+
+    <!-- Student Name -->
+    <label>Student Name</label>
+
+    <input
+      type="text"
+      formControlName="studentName">
+
+    <div class="error"
+      *ngIf="enrollForm.get('studentName')?.touched &&
+             enrollForm.get('studentName')?.errors?.['required']">
+      Name is required.
+    </div>
+
+    <div class="error"
+      *ngIf="enrollForm.get('studentName')?.touched &&
+             enrollForm.get('studentName')?.errors?.['minlength']">
+      Minimum 3 characters required.
+    </div>
+
+
+    <!-- Email -->
+    <label>Email</label>
+
+    <input
+      type="email"
+      formControlName="studentEmail">
+
+    <div class="error"
+      *ngIf="enrollForm.get('studentEmail')?.touched &&
+             enrollForm.get('studentEmail')?.errors?.['email']">
+      Invalid email address.
+    </div>
+
+    <div class="error"
+      *ngIf="enrollForm.get('studentEmail')?.errors?.['emailTaken']">
+      Email already taken.
+    </div>
+
+
+    <!-- Course ID -->
+    <label>Course Code</label>
+
+    <input
+      type="text"
+      formControlName="courseId">
+
+    <div class="error"
+      *ngIf="enrollForm.get('courseId')?.errors?.['noCourseCode']">
+      Course code starting with XX is not allowed.
+    </div>
+
+
+    <!-- Semester -->
+    <label>Preferred Semester</label>
+
+    <select formControlName="preferredSemester">
+
+      <option value="Odd">Odd</option>
+      <option value="Even">Even</option>
+
+    </select>
+
+
+    <!-- Additional Courses -->
+    <label>Additional Courses</label>
+
+    <div
+      class="course-row"
+      *ngFor="let ctrl of additionalCourses.controls; let i=index">
+
+      <input [formControl]="ctrl">
+
+      <button
+        type="button"
+        class="remove-btn"
+        (click)="removeCourse(i)">
+        Remove
+      </button>
+
+    </div>
+
+    <button
+      type="button"
+      class="add-btn"
+      (click)="addCourse()">
+      Add Another Course
+    </button>
+
+
+    <!-- Checkbox -->
+    <label>
+
+      <input
+        type="checkbox"
+        formControlName="agreeToTerms">
+
+      Agree to Terms
+
+    </label>
+
+
+    <!-- Buttons -->
+    <div class="actions">
+
+      <button
+        class="submit-btn"
+        type="submit"
+        [disabled]="enrollForm.invalid">
+
+        Submit
+
+      </button>
+
+      <button
+        class="reset-btn"
+        type="button"
+        (click)="resetForm()">
+
+        Reset
+
+      </button>
+
+    </div>
+
+  </form>
+
+</div>
