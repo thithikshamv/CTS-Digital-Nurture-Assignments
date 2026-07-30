@@ -1,0 +1,187 @@
+body{
+    background:#f4f7fb;
+}
+
+.form-container{
+
+    width:430px;
+    margin:40px auto;
+    padding:25px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+h2{
+
+    text-align:center;
+    color:#1976d2;
+    margin-bottom:20px;
+
+}
+
+.success{
+
+    background:#d4edda;
+    color:#155724;
+
+    padding:10px;
+
+    border-radius:6px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:5px;
+
+    font-weight:600;
+
+}
+
+input,
+select{
+
+    width:100%;
+
+    padding:10px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    font-size:15px;
+
+    box-sizing:border-box;
+
+}
+
+input.ng-valid.ng-touched,
+select.ng-valid.ng-touched{
+
+    border:2px solid #28a745;
+
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched{
+
+    border:2px solid #dc3545;
+
+}
+
+.error{
+
+    color:#dc3545;
+
+    font-size:13px;
+
+    margin-top:5px;
+
+}
+
+.course-row{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:10px;
+
+}
+
+.course-row input{
+
+    flex:1;
+
+}
+
+.add-btn{
+
+    background:#4caf50;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+.remove-btn{
+
+    background:#f44336;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+.actions{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+.actions button{
+
+    flex:1;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:6px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.submit-btn{
+
+    background:#1976d2;
+
+}
+
+.reset-btn{
+
+    background:#757575;
+
+}
+
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
