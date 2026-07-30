@@ -1,0 +1,49 @@
+<div class="home">
+
+  <h1>{{ portalName }}</h1>
+
+  <p>
+    Manage your courses, monitor your academic progress,
+    and enroll in new subjects with ease.
+  </p>
+
+  <button
+    class="enroll-btn"
+    [disabled]="!isPortalActive"
+    (click)="onEnrollClick()">
+    Enroll Now
+  </button>
+
+  <p class="message">{{ message }}</p>
+
+  <br><br>
+
+  <input
+    type="text"
+    placeholder="Search courses..."
+    [(ngModel)]="searchTerm">
+
+  <p>Searching for: {{ searchTerm }}</p>
+
+  <div class="stats">
+
+    <div class="card">
+      <h2>{{ courseCount }}</h2>
+      <p>Courses Available</p>
+    </div>
+
+    <div class="card">
+      <h2>3</h2>
+      <p>Enrolled</p>
+    </div>
+
+    <div class="card">
+      <h2>3.8</h2>
+      <p>GPA</p>
+    </div>
+
+    <app-course-summary-widget></app-course-summary-widget>
+
+  </div>
+
+</div>
