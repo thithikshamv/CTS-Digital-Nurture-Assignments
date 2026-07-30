@@ -1,0 +1,43 @@
+<input
+type="text"
+[(ngModel)]="searchTerm"
+(input)="updateSearch()"
+placeholder="Search Courses">
+
+<p *ngIf="errorMessage">{{ errorMessage }}</p>
+
+<div *ngIf="isLoading">
+    <p>Loading courses...</p>
+</div>
+
+<ng-container *ngIf="!isLoading">
+
+<div *ngIf="courses.length>0; else noCourses">
+
+<div *ngFor="let course of courses; trackBy: trackByCourseId">
+
+<app-course-card
+[course]="course">
+</app-course-card>
+
+<button (click)="updateCourse(course)">
+Update
+</button>
+
+<button (click)="deleteCourse(course.id)">
+Delete
+</button>
+
+<hr>
+
+</div>
+
+</div>
+
+</ng-container>
+
+<ng-template #noCourses>
+
+<p>No courses available.</p>
+
+</ng-template>
