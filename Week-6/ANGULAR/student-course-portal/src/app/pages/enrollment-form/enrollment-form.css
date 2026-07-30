@@ -1,0 +1,71 @@
+.form-container{
+
+    width:500px;
+    margin:40px auto;
+    padding:25px;
+
+    background:white;
+
+    border-radius:10px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+
+}
+
+label{
+
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+
+}
+
+input,
+select{
+
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+
+    border:1px solid #ccc;
+    border-radius:6px;
+
+}
+
+button{
+
+    margin-top:20px;
+
+    width:100%;
+
+    padding:12px;
+
+    background:#1976d2;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+}
+
+button:disabled{
+
+    background:gray;
+
+    cursor:not-allowed;
+
+}
+.success-message {
+  margin: 15px 0;
+  padding: 12px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
