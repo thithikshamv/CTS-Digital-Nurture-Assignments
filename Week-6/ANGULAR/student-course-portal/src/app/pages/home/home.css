@@ -1,0 +1,50 @@
+.home{
+    text-align:center;
+    padding:40px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin-top:40px;
+}
+
+.card{
+    width:180px;
+    padding:20px;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.card h2{
+    color:#1976d2;
+}
+.enroll-btn{
+    margin-top:20px;
+    padding:12px 28px;
+    border:none;
+    border-radius:8px;
+    background:#1976d2;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.enroll-btn:hover{
+    background:#1565c0;
+}
+
+.message{
+    color:green;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+input{
+    width:320px;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
